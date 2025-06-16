@@ -37,7 +37,7 @@ X = data["features"].to(device)
 lbl = data["labels"].to(device)
 ```
 
-*Last, to conduct the MIA:
+* Last, to conduct the MIA:
 ```
 cd attack
 cd edge/node/feature
@@ -48,4 +48,4 @@ python HSCD.py --dataset Cooking200
 python partition.py --dataset Cooking200
 ```
 
-*This is the author's first code and the experience is not rich enough. Perhaps the current code structure is very poor, but it can be guaranteed to run and reproduce at present. Modifications will be made when there is time in the future.
+* This is the author's first code and the experience is not rich enough. Perhaps the current code structure is very poor, but it can be guaranteed to run and reproduce at present. Modifications will be made when there is time in the future.
