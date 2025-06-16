@@ -21,4 +21,31 @@ cd HyperGraph-Unlearning
 ```
 cd edge/node/feature
 python retrain.py --dataset Cooking200
+python influence_function.py --dataset Cooking200
+python delete.py --dataset Cooking200
+python HSCD.py --dataset Cooking200
+python partition.py --dataset Cooking200
+dataset:"Cooking200", "CoauthorshipCora","CoauthorshipDBLP","CocitationCora",
+"CocitationCiteseer","Recipe100k","Recipe200k",
 ```
+
+* Second, features can be generated using the data set itself or using the identity matrix:
+```
+X, lbl = torch.eye(data["num_vertices"]).to(device), data["labels"].to(device)
+or
+X = data["features"].to(device)
+lbl = data["labels"].to(device)
+```
+
+*Last, to conduct the MIA:
+```
+cd attack
+cd edge/node/feature
+python retrain.py --dataset Cooking200
+python if.py --dataset Cooking200
+python delete.py --dataset Cooking200
+python HSCD.py --dataset Cooking200
+python partition.py --dataset Cooking200
+```
+
+*This is the author's first code and the experience is not rich enough. Perhaps the current code structure is very poor, but it can be guaranteed to run and reproduce at present. Modifications will be made when there is time in the future.
