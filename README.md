@@ -37,9 +37,14 @@ X = data["features"].to(device)
 lbl = data["labels"].to(device)
 ```
 
-* Last, to conduct the MIA:
+* Next, to obtain the original model embedding:
 ```
 cd attack
+python original.py
+```
+
+* Last, to conduct the MIA experiment:
+```  
 cd edge/node/feature
 python retrain.py --dataset Cooking200
 python if.py --dataset Cooking200
