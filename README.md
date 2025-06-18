@@ -53,4 +53,7 @@ python HSCD.py --dataset Cooking200
 python partition.py --dataset Cooking200
 ```
 
+## Citation
+If you find this project helpful, please consider to cite the following paper:
+
 
